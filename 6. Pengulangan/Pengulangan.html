@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pengulangan</title>
+    <style>
+
+        h1, h2, h3{
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+
+        div{
+            margin:  5px auto;
+        }
+        
+        .inline li{
+            display: inline;
+        }
+
+        .inline-block{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(153, 0, 255);
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+            display: inline-block;
+        }
+
+        .block{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 115);
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+            display: block;
+        }
+
+        .none{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 17, 255);
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+            display: none;
+        }
+
+        .dimensi-px{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .dimensi-persen{
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .dimensi-cm{
+            width: 100mm;
+            height: 100mm;
+            background-color: yellow;
+            text-align: center;
+            line-height: 100mm;
+        }
+
+        .dimensi-px{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .overflow1{
+            width: 400px;
+            height: 400px;
+            border: 5px solid black;
+            overflow: auto;
+        }
+
+        .overflow2{
+            width: 400px;
+            height: 400px;
+            border: 5px solid black;
+            overflow: hidden;
+        }
+
+        .overflow3{
+            width: 400px;
+            height: 400px;
+            border: 5px solid black;
+            overflow: scroll;
+        }
+        
+        .margin{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px;
+            font-size: 30px;
+        }
+
+        .margin-left{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin-left: 30px;
+            font-size: 20px;
+        }
+
+        .margin-top{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .margin-right{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin-right: 30px;
+            font-size: 19px;
+        }
+
+        .margin-bottom{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .overlapping-margin-vertikal{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 30px;
+            margin-top: 40px;
+            font-size: 8px;
+            font-weight: bold;
+        }
+        
+        .overlapping-margin-horizontal{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin-left: 30px;
+            margin-left: 10px;
+            font-size: 7px;
+            font-weight: bold;
+        }
+
+        .negatif-margin{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin-left: -30px;
+            font-size: 15px;
+        }
+
+        .auto{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            font-size: 30px;
+        }
+
+        .shorthand{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px 10px 40px 50px;
+            font-size: 20px;
+        }
+
+        .border-top{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border-top: 5px solid;
+        }
+
+        .border-right{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border-right: 5px solid;
+        }
+
+        .border-bottom{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border-bottom: 5px solid;
+        }
+
+        .border-left{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border-left: 5px solid;
+        }
+
+        .border{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border: 5px solid;
+        }
+
+        .solid{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border: 5px solid;
+        }
+
+        .dotted{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border: 5px dotted;
+        }
+
+        .dashed{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border: 5px dashed;
+        }
+
+        .double{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border: 5px double;
+        }
+
+        .border-color{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            border: 5px solid blue;
+            font-size: 10px;
+        }
+
+        .padding{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            font-size: 30px;
+            padding: 15px;
+        }
+
+        .padding-top{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            font-size: 20px;
+            padding-top: 15px;
+        }
+
+        .padding-right{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            font-size: 18px;
+            padding-right: 15px;
+        }
+
+        .padding-bottom{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            font-size: 15px;
+            padding-bottom: 20px;
+        }
+        .padding-left{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px auto;
+            font-size: 15px;
+            padding-left: 15px;
+        }
+
+        .Box-sizing{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 70px;
+            margin: 30px auto;
+            font-size: 15px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .Reset{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 70px;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .float-none{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(2, 177, 2);
+            line-height: 100px;
+            text-align: center;
+            float: none;
+        }
+
+        .float-right{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(2, 177, 2);
+            line-height: 100px;
+            text-align: center;
+            float: right;
+        }
+
+        .float-left{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(2, 177, 2);
+            line-height: 100px;
+            text-align: center;
+            float: left;
+        }
+
+        .position{
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        .position1{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 191);
+            margin: 20px 0;
+            padding: 0%;
+            position: relative;
+            top: 0;
+            left: 0;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .position2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 191);
+            margin: 20px 0;
+            padding: 0%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .position3{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 255, 191);
+            margin: 20px 0;
+            padding: 0%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>display</h1>
+
+        <h2>inline</h2>
+            <div class="inline">
+                <ul>
+                    <li><a href="#">inline</a></li>
+                    <li><a href="#">inline</a></li>
+                    <li><a href="#">inline</a></li>
+                    <li><a href="#">inline</a></li>
+                    <li><a href="#">inline</a></li>
+                </ul>
+            </div>
+
+        <h2>inline-block</h2>
+            <div class="inline-block">Inlnine-block</div>
+            <div class="inline-block">iInlnine-block</div>
+
+        <h2>block</h2>
+            <div class="block">Block</div>
+            <div class="block">Block</div>
+
+        <h2>none</h2>
+        
+
+    <h1>dimensi</h1>
+        <div class="dimensi-px">Dimensi-px</div>
+        <div class="dimensi-persen">Dimensi-%</div>
+        <div class="dimensi-cm">Dimensi-mm(ukuran dunia nyata)</div>
+
+    <h1>overflow</h1>
+
+        <h2>Auto</h2>
+            <div class="overflow1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum neque laborum aut ea, odio aliquam, reprehenderit natus libero aperiam esse ducimus numquam velit placeat assumenda maxime, voluptate sequi accusantium ullam. Similique ipsum voluptas repellendus molestias, quaerat eos corporis hic sunt repudiandae exercitationem architecto vitae adipisci temporibus sequi praesentium modi ut magni accusantium excepturi, atque eum voluptatum. Autem nam doloremque quibusdam, quas asperiores maiores tenetur repellat tempora error veniam! Rerum adipisci facilis assumenda, illo eaque inventore corrupti molestias eligendi cupiditate, deleniti rem dolores esse commodi. Recusandae deleniti dolore tenetur ab, id consequuntur animi, numquam itaque nulla facilis quaerat error, eveniet consectetur quibusdam obcaecati voluptatem asperiores repellendus placeat et ipsa similique natus cum explicabo? Quis quam alias, quas porro explicabo exercitationem error sit tempora rerum, quasi beatae eligendi eius odit repudiandae. Optio, in. Facere unde quasi nisi sed. Officia omnis ipsum doloribus autem molestiae soluta sequi molestias veniam repellendus, labore quaerat sit alias. Quisquam explicabo officiis ab, cum pariatur molestias incidunt maiores, libero nihil provident voluptatum dicta doloremque accusamus illum? Mollitia in dolorem modi perspiciatis est architecto magnam harum neque quisquam quidem nulla tenetur molestiae hic, eius minus odit itaque delectus atque earum minima voluptas, doloribus ad illo. Corrupti, aperiam necessitatibus!</p>
+            </div>
+
+        <h2>Hiden</h2>
+            <div class="overflow2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum neque laborum aut ea, odio aliquam, reprehenderit natus libero aperiam esse ducimus numquam velit placeat assumenda maxime, voluptate sequi accusantium ullam. Similique ipsum voluptas repellendus molestias, quaerat eos corporis hic sunt repudiandae exercitationem architecto vitae adipisci temporibus sequi praesentium modi ut magni accusantium excepturi, atque eum voluptatum. Autem nam doloremque quibusdam, quas asperiores maiores tenetur repellat tempora error veniam! Rerum adipisci facilis assumenda, illo eaque inventore corrupti molestias eligendi cupiditate, deleniti rem dolores esse commodi. Recusandae deleniti dolore tenetur ab, id consequuntur animi, numquam itaque nulla facilis quaerat error, eveniet consectetur quibusdam obcaecati voluptatem asperiores repellendus placeat et ipsa similique natus cum explicabo? Quis quam alias, quas porro explicabo exercitationem error sit tempora rerum, quasi beatae eligendi eius odit repudiandae. Optio, in. Facere unde quasi nisi sed. Officia omnis ipsum doloribus autem molestiae soluta sequi molestias veniam repellendus, labore quaerat sit alias. Quisquam explicabo officiis ab, cum pariatur molestias incidunt maiores, libero nihil provident voluptatum dicta doloremque accusamus illum? Mollitia in dolorem modi perspiciatis est architecto magnam harum neque quisquam quidem nulla tenetur molestiae hic, eius minus odit itaque delectus atque earum minima voluptas, doloribus ad illo. Corrupti, aperiam necessitatibus!</p>
+            </div>
+
+        <h2>Scrol</h2>
+            <div class="overflow3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum neque laborum aut ea, odio aliquam, reprehenderit natus libero aperiam esse ducimus numquam velit placeat assumenda maxime, voluptate sequi accusantium ullam. Similique ipsum voluptas repellendus molestias, quaerat eos corporis hic sunt repudiandae exercitationem architecto vitae adipisci temporibus sequi praesentium modi ut magni accusantium excepturi, atque eum voluptatum. Autem nam doloremque quibusdam, quas asperiores maiores tenetur repellat tempora error veniam! Rerum adipisci facilis assumenda, illo eaque inventore corrupti molestias eligendi cupiditate, deleniti rem dolores esse commodi. Recusandae deleniti dolore tenetur ab, id consequuntur animi, numquam itaque nulla facilis quaerat error, eveniet consectetur quibusdam obcaecati voluptatem asperiores repellendus placeat et ipsa similique natus cum explicabo? Quis quam alias, quas porro explicabo exercitationem error sit tempora rerum, quasi beatae eligendi eius odit repudiandae. Optio, in. Facere unde quasi nisi sed. Officia omnis ipsum doloribus autem molestiae soluta sequi molestias veniam repellendus, labore quaerat sit alias. Quisquam explicabo officiis ab, cum pariatur molestias incidunt maiores, libero nihil provident voluptatum dicta doloremque accusamus illum? Mollitia in dolorem modi perspiciatis est architecto magnam harum neque quisquam quidem nulla tenetur molestiae hic, eius minus odit itaque delectus atque earum minima voluptas, doloribus ad illo. Corrupti, aperiam necessitatibus!</p>
+            </div>
+
+    <h1>box-model</h1>
+
+        <h2>margin</h2>
+            <div class="margin-left">Margin-left</div>
+            <div class="margin-top">Margin-top</div>
+            <div class="margin-right">Margin-right</div>
+            <div class="margin-bottom">Margin-bottom</div>
+            <div class="margin">Margin</div>
+            <div class="overlapping-margin-vertikal">Overlapping-margin-vertikal</div>
+            <div class="overlapping-margin-horizontal">Overlapping-margin-horizontal</div>
+            <div class="negatif-margin">Negatif-Margin</div>
+            <div class="auto">Auto</div>
+            <div class="shorthand">Shorthand</div>
+
+        <h2>border</h2>
+
+            <h3>border-width</h3>
+                <div class="border-top">Border-top</div>
+                <div class="border-right">Border-right</div>
+                <div class="border-bottom">Border-bottom</div>
+                <div class="border-left">Border-left</div>
+                <div class="border">Border</div>
+                
+            <h3>border-style</h3>
+                <div class="solid">Solid</div>
+                <div class="dotted ">Dotted</div>
+                <div class="dashed">Dashed</div>
+                <div class="double">Double</div>
+
+            <h3>border-color<h3>
+                <div class="border-color">border-color</div>
+
+        <h2>padding</h2>
+            <div class="padding-top">Padding-top</div>
+            <div class="padding-right">Padding-right</div>
+            <div class="padding-bottom">Padding-bottom</div>
+            <div class="padding-left">Padding-left</div>
+            <div class="padding">Padding</div>
+
+        <h2>box-sizing</h2>
+            <div class="Box-sizing">Box-sizing</div>
+
+        <h2>Reset</h2>
+            <div class="Reset">Reset</div>
+
+    <h1>float</h1>
+        <div class="float-none">Float-none</div>
+        <div class="float-right">Float-right</div>
+        <div class="float-left">Float-left</div>
+
+        <div style="clear:both;"></div>
+
+    <h1>position</h1>
+        <div class="position">
+            <div class="position1">Relative</div>
+            <div class="position2">Absolute</div>
+            <div class="position3">Fixed</div>
+        </div>
+</body>
+</html>
